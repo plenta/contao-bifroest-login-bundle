@@ -24,7 +24,7 @@ $GLOBALS['TL_DCA']['tl_content']['palettes'][BifroestLoginController::TYPE] = '
 {invisible_legend:hide},invisible,start,stop';
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['bifroest_services'] = [
-    'inputType' => 'checkbox',
+    'inputType' => 'checkboxWizard',
     'eval' => ['multiple' => true],
     'reference' => &$GLOBALS['TL_LANG']['tl_content']['bifroest_services_options'],
     'sql' => 'mediumtext NULL',
