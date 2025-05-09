@@ -8,6 +8,7 @@
     {% endadd %}
 
     {% for service in data.bifroest_services|deserialize %}
+        <div class="sso-button sso-button-service-{{ service }}">
         {% if service == 'google' %}
             {% add 'google_script' to head %}
                 <script src="https://accounts.google.com/gsi/client" async></script>
@@ -62,5 +63,6 @@
                 <a href="{{ path('bifroest_' ~ (service|lower) ~ '_register') }}" title="{{ 'MSC.bifroest.sign_in_with_linkedIn'|trans }}"><span class="title">{{ 'MSC.bifroest.sign_in_with_linkedIn'|trans }}</span></a>
             </div>
         {% endif %}
+        </div>
     {% endfor %}
 {% endblock %}
