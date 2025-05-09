@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file>
+        <body>
+            <trans-unit id="tl_content.config_legend">
+                <target>Konfiguration</target>
+            </trans-unit>
+            <trans-unit id="tl_content.layout_linkedin_legend">
+                <target>Design - LinkedIn</target>
+            </trans-unit>
+            <trans-unit id="tl_content.layout_google_legend">
+                <target>Design - Google</target>
+            </trans-unit>
+            <trans-unit id="tl_content.layout_apple_legend">
+                <target>Design - Apple</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_services.0">
+                <target>Dienste</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_services.1">
+                <target>Bitte wählen Sie die Dienste aus, die das Login-Element unterstützen soll.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_jumpTo.0">
+                <target>Weiterleitungsseite</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_jumpTo.1">
+                <target>Bitte wählen Sie die Seite aus, zu der der Nutzer nach dem Login weitergeleitet werden soll.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_jumpTo_emailInUse.0">
+                <target>Fehlerseite - E-Mail-Adresse bereits vergeben</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_jumpTo_emailInUse.1">
+                <target>Bitte wählen Sie die Seite aus, zu der der Nutzer weitergeleitet werden soll, wenn bereits ein Benutzer mit der E-Mail-Adresse des gewählten Accounts existiert.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_linkedin_icon_size.0">
+                <target>Buttongröße</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_linkedin_icon_size.1">
+                <target>Bitte wählen Sie eine Buttongröße aus der Liste aus.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_linkedin_icon_type.0">
+                <target>Buttontyp</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_linkedin_icon_type.1">
+                <target>Bitte wählen Sie einen Buttontypen aus der Liste aus.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_google_icon_type.0">
+                <target>Buttontyp</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_google_icon_type.1">
+                <target>Bitte wählen Sie einen Buttontypen aus der Liste aus.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_google_icon_theme.0">
+                <target>Buttontheme</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_google_icon_theme.1">
+                <target>Bitte wählen Sie ein Buttontheme aus der Liste aus.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_google_icon_size.0">
+                <target>Buttongröße</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_google_icon_size.1">
+                <target>Bitte wählen Sie eine Buttongröße aus der Liste aus.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_google_icon_shape.0">
+                <target>Buttonform</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_google_icon_shape.1">
+                <target>Bitte wählen Sie eine Buttonform aus der Liste aus.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_google_icon_text.0">
+                <target>Buttontext</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_google_icon_text.1">
+                <target>Bitte wählen Sie einen Buttontext aus der Liste aus.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_google_icon_alignment.0">
+                <target>Iconausrichtung</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_google_icon_alignment.1">
+                <target>Bitte wählen Sie eine Iconausrichtung aus der Liste aus.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_google_icon_width.0">
+                <target>Buttonbreite</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_google_icon_width.1">
+                <target>Bitte geben Sie die Buttonbreite in Pixel an.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_mode.0">
+                <target>Buttonmodus</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_mode.1">
+                <target>Bitte wählen Sie einen Buttonmodus aus der Liste aus.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_type.0">
+                <target>Buttontyp</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_type.1">
+                <target>Bitte wählen Sie einen Buttontypen aus der Liste aus.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_color.0">
+                <target>Buttonfarbe</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_color.1">
+                <target>Bitte wählen Sie eine Buttonfarbe aus der Liste aus.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_border.0">
+                <target>Buttonrahmen anzeigen</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_border.1">
+                <target>Es wird ein Rahmen um den Button angezeigt.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_border_radius.0">
+                <target>Rahmen-Radius</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_border_radius.1">
+                <target>Bitte geben Sie einen Rahmen-Radius für den Button an.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_width.0">
+                <target>Buttonbreite</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_width.1">
+                <target>Bitte geben Sie eine Buttonbreite in Pixel ein.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_height.0">
+                <target>Buttonhöhe</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_height.1">
+                <target>Bitte geben Sie eine Buttonhöhe in Pixel ein.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_size.0">
+                <target>Icongröße</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_size.1">
+                <target>Bitte wählen Sie eine Icongröße aus der Liste aus.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_logo_position.0">
+                <target>Icon-Position</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_logo_position.1">
+                <target>Bitte geben Sie die Position des Icons (Abstand zum linken Rand in Pixel) ein.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_label_position.0">
+                <target>Text-Position</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_apple_icon_label_position.1">
+                <target>Bitte geben Sie die Position des Textes (Abstand zum linken Rand in Pixel) ein.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_services_options.linkedIn">
+                <target>LinkedIn</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_services_options.google">
+                <target>Google</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_services_options.apple">
+                <target>Apple</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_sizes_options.small">
+                <target>Klein</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_sizes_options.medium">
+                <target>Mittel</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_sizes_options.large">
+                <target>Groß</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_type_options.standard">
+                <target>Standard</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_type_options.icon">
+                <target>Icon</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_theme_options.outline">
+                <target>Rahmen</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_theme_options.filled_blue">
+                <target>Blau ausgefüllt</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_theme_options.filled_black">
+                <target>Schwarz ausgefüllt</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_shape_options.rectangular">
+                <target>Rechteckig</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_shape_options.pill">
+                <target>Pille</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_shape_options.circle">
+                <target>Kreis</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_shape_options.square">
+                <target>Quadrat</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_text_options.signin_with">
+                <target>Anmelden über ...</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_text_options.signup_with">
+                <target>Anmelden mit ...</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_text_options.continue_with">
+                <target>Weiter mit ...</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_text_options.sign-in">
+                <target>Anmelden über ...</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_text_options.sign-up">
+                <target>Anmelden mit ...</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_text_options.continue">
+                <target>Weiter mit ...</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_text_options.signin">
+                <target>Anmelden</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_alignment_options.left">
+                <target>Links</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_alignment_options.center">
+                <target>Mittig</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_alignment_options.left-align">
+                <target>Links</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_alignment_options.center-align">
+                <target>Mittig</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_alignment_options.logo-only">
+                <target>Nur Logo</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_color_options.white">
+                <target>Weiß</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_icon_color_options.black">
+                <target>Schwarz</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_module.0">
+                <target>Registrierungs-Modul</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_module.1">
+                <target>Bitte wählen Sie ein Registrierungs-Modul aus. Die Einstellungen dieses Moduls werden für die Accounterstellung verwendet.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

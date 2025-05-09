@@ -1,0 +1,66 @@
+{% extends '@Contao/content_element/_base.html.twig' %}
+
+{% trans_default_domain 'contao_default' %}
+
+{% block content %}
+    {% add 'bifroest_css' to head %}
+        <link rel="stylesheet" href="{{ asset('bifroestlogin/layout.css', 'bifroestlogin') }}">
+    {% endadd %}
+
+    {% for service in data.bifroest_services|deserialize %}
+        {% if service == 'google' %}
+            {% add 'google_script' to head %}
+                <script src="https://accounts.google.com/gsi/client" async></script>
+            {% endadd %}
+
+            <div id="g_id_onload"
+                 data-client_id="{{ google_api_key }}"
+                 data-context="signin"
+                 data-ux_mode="redirect"
+                 data-login_uri="{{ absolute_url(path('bifroest_google_callback')) }}"
+                 data-auto_prompt="false"
+                 data-use_fedcm_for_prompt="true"
+                 data-use_fedcm_for_button="true"
+            >
+            </div>
+
+            <div class="g_id_signin"
+                 data-type="{{ data.bifroest_google_icon_type }}"
+                 data-shape="{{ data.bifroest_google_icon_shape }}"
+                 data-theme="{{ data.bifroest_google_icon_theme }}"
+                 data-text="{{ data.bifroest_google_icon_text }}"
+                 data-size="{{ data.bifroest_google_icon_size }}"
+                 data-logo_alignment="{{ data.bifroest_google_icon_alignment }}"
+                 data-width="{{ data.bifroest_google_icon_width }}">
+            </div>
+        {% elseif service == 'apple' %}
+            {% add 'apple_meta' to head %}
+                <meta name="appleid-signin-client-id" content="{{ apple_client_id }}">
+                <meta name="appleid-signin-scope" content="name email">
+                <meta name="appleid-signin-redirect-uri" content="{{ absolute_url(path('bifroest_apple_callback')) }}">
+                <meta name="appleid-signin-state" content="{{ state }}">
+            {% endadd %}
+            {% add 'apple_account' to body %}
+                <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+            {% endadd %}
+
+            <div id="appleid-signin"
+                 data-color="{{ data.bifroest_apple_icon_color }}"
+                 data-border="{% if data.bifroest_apple_icon_border %}true{% else %}false{% endif %}"
+                 data-type="{{ data.bifroest_apple_icon_type }}"
+                 data-mode="{{ data.bifroest_apple_icon_mode }}"
+                 data-border-radius="{{ data.bifroest_apple_icon_border_radius }}"
+                 data-width="{{ data.bifroest_apple_icon_width ?: '100%' }}"
+                 data-height="{{ data.bifroest_apple_icon_height ?: '100%' }}"
+                 data-logo-size="{{ data.bifroest_apple_icon_size }}"
+                 data-logo-position="{{ data.bifroest_apple_icon_logo_position }}"
+                 data-label-position="{{ data.bifroest_apple_icon_label_position }}"
+            >
+            </div>
+        {% elseif service == 'linkedIn' %}
+            <div class="login-service service-{{ service }} icon-size-{{ data.bifroest_linkedin_icon_size }} icon-type-{{ data.bifroest_linkedin_icon_type }}">
+                <a href="{{ path('bifroest_' ~ (service|lower) ~ '_register') }}" title="{{ 'MSC.bifroest.sign_in_with_linkedIn'|trans }}"><span class="title">{{ 'MSC.bifroest.sign_in_with_linkedIn'|trans }}</span></a>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

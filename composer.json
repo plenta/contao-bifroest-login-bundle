@@ -1,0 +1,46 @@
+{
+    "name": "plenta/contao-bifroest-login-bundle",
+    "type": "contao-bundle",
+    "description": "Login-Bundle",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Plenta.io",
+            "homepage": "https://plenta.io"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "ext-json": "*",
+        "contao/conflicts": "@dev",
+        "contao/core-bundle": "^5.3",
+        "doctrine/dbal": "^3.2.0",
+        "symfony/http-client": "^6.4",
+        "google/apiclient": "^2.18",
+        "lcobucci/jwt": "^5.5"
+    },
+    "require-dev": {
+        "contao/manager-bundle": "5.3.*",
+        "phpunit/phpunit": "^9.5.10",
+        "contao/test-case": "^5.3",
+        "symfony/phpunit-bridge": "^v6.4.9",
+        "friendsofphp/php-cs-fixer": "^3.2"
+    },
+    "extra": {
+        "contao-manager-plugin": "Plenta\\ContaoBifroestLogin\\ContaoManager\\Plugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Plenta\\ContaoBifroestLogin\\": "src"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true,
+            "contao-components/installer": true,
+            "contao/manager-plugin": true,
+            "contao-community-alliance/composer-plugin": true,
+            "php-http/discovery": true
+        }
+    }
+}

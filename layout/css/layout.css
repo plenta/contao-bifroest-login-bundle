@@ -1,0 +1,79 @@
+.content-bifroest-login {
+    .login-service.service-linkedIn {
+        a {
+            span.title {
+                display: none;
+            }
+
+            display: block;
+        }
+
+        &.icon-type-retina {
+            &.icon-size-large {
+                a {
+                    background-image: url(../img/icons/linkedin/Retina/Sign-in-Large---Default.png);
+                    width: 430px;
+                    height: 80px;
+
+                    &:hover {
+                        background-image: url(../img/icons/linkedin/Retina/Sign-in-Large---Hover.png);
+                    }
+
+                    &:active {
+                        background-image: url(../img/icons/linkedin/Retina/Sign-in-Large---Active.png);
+                    }
+                }
+            }
+
+            &.icon-size-small {
+                a {
+                    background-image: url(../img/icons/linkedin/Retina/Sign-in-Small---Default.png);
+                    width: 292px;
+                    height: 40px;
+
+                    &:hover {
+                        background-image: url(../img/icons/linkedin/Retina/Sign-in-Small---Hover.png);
+                    }
+
+                    &:active {
+                        background-image: url(../img/icons/linkedin/Retina/Sign-in-Small---Active.png);
+                    }
+                }
+            }
+        }
+
+        &.icon-type-non-retina {
+            &.icon-size-large {
+                a {
+                    background-image: url(../img/icons/linkedin/Non-Retina/Sign-in-Large---Default.png);
+                    width: 215px;
+                    height: 41px;
+
+                    &:hover {
+                        background-image: url(../img/icons/linkedin/Non-Retina/Sign-in-Large---Hover.png);
+                    }
+
+                    &:active {
+                        background-image: url(../img/icons/linkedin/Non-Retina/Sign-in-Large---Active.png);
+                    }
+                }
+            }
+
+            &.icon-size-small {
+                a {
+                    background-image: url(../img/icons/linkedin/Non-Retina/Sign-in-Small---Default.png);
+                    width: 146px;
+                    height: 21px;
+
+                    &:hover {
+                        background-image: url(../img/icons/linkedin/Non-Retina/Sign-in-Small---Hover.png);
+                    }
+
+                    &:active {
+                        background-image: url(../img/icons/linkedin/Non-Retina/Sign-in-Small---Active.png);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+    <file>
+        <body>
+            <trans-unit id="MSC.bifroest.sign_in_with_linkedIn">
+                <target>Über LinkedIn anmelden</target>
+            </trans-unit>
+            <trans-unit id="CTE.bifroest_login.0">
+                <target>Single-Sign-On-Login</target>
+            </trans-unit>
+            <trans-unit id="CTE.bifroest_login.1">
+                <target>Single-Sign-On-Login</target>
+            </trans-unit>
+            <trans-unit id="CTE.login">
+                <target>Login</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

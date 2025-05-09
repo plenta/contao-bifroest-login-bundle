@@ -1,0 +1,15 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+        bind:
+            $bifroestConfig:
+                linkedIn_api_key: '%bifroest_linkedin_api_key%'
+                linkedIn_api_secret: '%bifroest_linkedin_api_secret%'
+                google_api_key: '%bifroest_google_api_key%'
+                apple_client_id: '%bifroest_apple_client_id%'
+
+    Plenta\ContaoBifroestLogin\:
+        resource: ../src/*
+        exclude: ../src/{Entity,Migrations,Resources,Tests}
