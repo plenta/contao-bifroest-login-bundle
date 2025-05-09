@@ -52,8 +52,6 @@ class TlContent
             $attributes['description'] = &$GLOBALS['TL_LANG']['tl_content']['bifroest_module'][1];
         }
 
-        dump($attributes);
-
         return $attributes;
     }
 }
