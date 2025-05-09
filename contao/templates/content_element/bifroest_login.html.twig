@@ -3,6 +3,10 @@
 {% trans_default_domain 'contao_default' %}
 
 {% block content %}
+    {% if data.text|default %}
+        <div class="text">{{ data.text|raw }}</div>
+    {% endif %}
+
     {% add 'bifroest_css' to head %}
         <link rel="stylesheet" href="{{ asset('bifroestlogin/layout.css', 'bifroestlogin') }}">
     {% endadd %}

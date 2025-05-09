@@ -54,4 +54,14 @@ class TlContent
 
         return $attributes;
     }
+
+    #[AsCallback(table: 'tl_content', target: 'fields.text.attributes')]
+    public function textAttributes(array $attributes, ?DataContainer $dc = null)
+    {
+        if (BifroestLoginController::TYPE === $dc?->activeRecord->type) {
+            $attributes['mandatory'] = false;
+        }
+
+        return $attributes;
+    }
 }

@@ -15,6 +15,7 @@ use Plenta\ContaoBifroestLogin\Controller\Contao\ContentElement\BifroestLoginCon
 $GLOBALS['TL_DCA']['tl_content']['palettes'][BifroestLoginController::TYPE] = '
 {type_legend},type,headline;
 {config_legend},bifroest_services,module,bifroest_jumpTo,bifroest_jumpTo_emailInUse;
+{text_legend},text;
 {layout_linkedin_legend},bifroest_linkedin_icon_size,bifroest_linkedin_icon_type;
 {layout_google_legend},bifroest_google_icon_type,bifroest_google_icon_theme,bifroest_google_icon_size,bifroest_google_icon_shape,bifroest_google_icon_text,bifroest_google_icon_alignment,bifroest_google_icon_width;
 {layout_apple_legend},bifroest_apple_icon_mode,bifroest_apple_icon_type,bifroest_apple_icon_color,bifroest_apple_icon_border,bifroest_apple_icon_border_radius,bifroest_apple_icon_width,bifroest_apple_icon_height,bifroest_apple_icon_size,bifroest_apple_icon_logo_position,bifroest_apple_icon_label_position;
