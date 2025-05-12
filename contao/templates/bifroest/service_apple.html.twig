@@ -4,9 +4,10 @@
     <meta name="appleid-signin-redirect-uri" content="{{ absolute_url(path('bifroest_apple_callback')) }}">
     <meta name="appleid-signin-state" content="{{ state }}">
 {% endadd %}
-            {% add 'apple_account' to body %}
-                <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
-            {% endadd %}
+
+{% add 'apple_account' to body %}
+    <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+{% endadd %}
 
 <div id="appleid-signin"
      data-color="{{ data.bifroest_apple_icon_color }}"
