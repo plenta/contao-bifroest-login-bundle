@@ -3,10 +3,10 @@
     <file>
         <body>
             <trans-unit id="MSC.bifroest.sign_in_with_linkedIn">
-                <target>Über LinkedIn anmelden</target>
+                <target>Sign up with LinkedIn</target>
             </trans-unit>
             <trans-unit id="MSC.bifroest.sign_in_with_apple">
-                <target>Über Apple anmelden</target>
+                <target>Sign up with Apple</target>
             </trans-unit>
             <trans-unit id="CTE.bifroest_login.0">
                 <target>Single-Sign-On-Login</target>
