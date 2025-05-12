@@ -1,0 +1,24 @@
+{% add 'google_script' to head %}
+    <script src="https://accounts.google.com/gsi/client" async></script>
+{% endadd %}
+
+<div id="g_id_onload"
+     data-client_id="{{ google_api_key }}"
+     data-context="signin"
+     data-ux_mode="redirect"
+     data-login_uri="{{ absolute_url(path('bifroest_google_callback')) }}"
+     data-auto_prompt="false"
+     data-use_fedcm_for_prompt="true"
+     data-use_fedcm_for_button="true"
+>
+</div>
+
+<div class="g_id_signin"
+     data-type="{{ data.bifroest_google_icon_type }}"
+     data-shape="{{ data.bifroest_google_icon_shape }}"
+     data-theme="{{ data.bifroest_google_icon_theme }}"
+     data-text="{{ data.bifroest_google_icon_text }}"
+     data-size="{{ data.bifroest_google_icon_size }}"
+     data-logo_alignment="{{ data.bifroest_google_icon_alignment }}"
+     data-width="{{ data.bifroest_google_icon_width }}">
+</div>
