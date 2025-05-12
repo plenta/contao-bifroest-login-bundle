@@ -13,12 +13,7 @@
 
     {% for service in data.bifroest_services|default([])|deserialize %}
     <div class="sso-button sso-button-service-{{ service|e('html_attr') }}">
-        {% include '@Contao/bifroest/service_' ~ service|lower ~ '.html.twig' with {
-            data: data,
-            google_api_key: google_api_key,
-            apple_client_id: apple_client_id,
-            state: state
-        } only %}
+        {{ include '@Contao/bifroest/service_' ~ service|lower ~ '.html.twig' }}
     </div>
     {% endfor %}
 {% endblock %}
