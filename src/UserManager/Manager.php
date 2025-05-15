@@ -16,6 +16,7 @@ use Contao\CoreBundle\Security\User\UserChecker;
 use Contao\FilesModel;
 use Contao\Folder;
 use Contao\MemberModel;
+use Contao\Module;
 use Contao\ModuleModel;
 use Contao\StringUtil;
 use Contao\System;
@@ -87,7 +88,7 @@ class Manager
         // HOOK: send insert ID and user data
         if (isset($GLOBALS['TL_HOOKS']['createNewUser']) && \is_array($GLOBALS['TL_HOOKS']['createNewUser'])) {
             foreach ($GLOBALS['TL_HOOKS']['createNewUser'] as $callback) {
-                System::importStatic($callback[0])->{$callback[1]}($objNewUser->id, $arrData, $this);
+                System::importStatic($callback[0])->{$callback[1]}($objNewUser->id, $arrData, Module::getFrontendModule($module->id));
             }
         }
 
