@@ -239,6 +239,12 @@
             <trans-unit id="tl_content.bifroest_module.1">
                 <target>Bitte wählen Sie ein Registrierungs-Modul aus. Die Einstellungen dieses Moduls werden für die Accounterstellung verwendet.</target>
             </trans-unit>
+            <trans-unit id="tl_content.bifroest_friendly_forwarding.0">
+                <target>Zur zuletzt besuchten Seite weiterleiten</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_friendly_forwarding.1">
+                <target>Nach dem Login wird der Benutzer zur zuletzt besuchten Seite weitergeleitet.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

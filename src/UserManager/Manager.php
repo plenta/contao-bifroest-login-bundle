@@ -21,6 +21,7 @@ use Contao\ModuleModel;
 use Contao\StringUtil;
 use Contao\System;
 use Contao\Versions;
+use Plenta\ContaoBifroestLogin\Cookies\CookieManager;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
@@ -39,6 +40,7 @@ class Manager
         protected TokenStorageInterface $tokenStorage,
         protected RequestStack $requestStack,
         protected EventDispatcherInterface $eventDispatcher,
+        protected CookieManager $cookieManager,
     ) {
     }
 
@@ -125,7 +127,10 @@ class Manager
         $event = new InteractiveLoginEvent($request, $usernamePasswordToken);
         $this->eventDispatcher->dispatch($event, 'security.interactive_login');
 
-        $request->getSession()->remove('bifroest_registration_state');
-        $request->getSession()->remove('bifroest_registration_content_element');
+        $this->cookieManager
+            ->removeCookie('bifroest_login_content_element')
+            ->removeCookie('bifroest_login_state')
+            ->removeCookie('bifroest_login_redirect')
+        ;
     }
 }

@@ -24,7 +24,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
 
 #[Route('_bifroest/auth/google', defaults: ['_scope' => 'frontend'])]
-class GoogleController extends AbstractController
+class GoogleController extends AbstractAuthenticationController
 {
     #[Route('/callback', name: 'bifroest_google_callback', defaults: ['_token_check' => false], methods: ['POST'])]
     public function callback(
@@ -47,8 +47,9 @@ class GoogleController extends AbstractController
         if ($user && $user->bifroest_google_sub === $data['sub']) {
             $userManager->loginUser($user);
 
-            return $this->redirect($contentUrlGenerator->generate($jumpTo));
+            return $this->redirectAfterLogin($request, $jumpTo);
         }
+
         if ($user) {
             $page = PageModel::findByPk($element->bifroest_jumpTo_emailInUse);
 
@@ -68,6 +69,6 @@ class GoogleController extends AbstractController
 
         $userManager->loginUser($user);
 
-        return $this->redirect($contentUrlGenerator->generate($jumpTo));
+        return $this->redirectAfterLogin($request, $jumpTo);;
     }
 }

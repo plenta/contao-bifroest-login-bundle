@@ -14,7 +14,7 @@ use Plenta\ContaoBifroestLogin\Controller\Contao\ContentElement\BifroestLoginCon
 
 $GLOBALS['TL_DCA']['tl_content']['palettes'][BifroestLoginController::TYPE] = '
 {type_legend},type,headline;
-{config_legend},bifroest_services,module,bifroest_jumpTo,bifroest_jumpTo_emailInUse;
+{config_legend},bifroest_services,module,bifroest_jumpTo,bifroest_jumpTo_emailInUse,bifroest_friendly_forwarding;
 {text_legend},text;
 {layout_linkedin_legend},bifroest_linkedin_icon_size,bifroest_linkedin_icon_type;
 {layout_google_legend},bifroest_google_icon_type,bifroest_google_icon_theme,bifroest_google_icon_size,bifroest_google_icon_shape,bifroest_google_icon_text,bifroest_google_icon_alignment,bifroest_google_icon_width;
@@ -185,4 +185,9 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['bifroest_apple_icon_label_position']
     'inputType' => 'text',
     'eval' => ['rgxp' => 'natural', 'tl_class' => 'w33'],
     'sql' => 'int(10) unsigned NOT NULL default 0',
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['bifroest_friendly_forwarding'] = [
+    'inputType' => 'checkbox',
+    'sql' => ['type' => 'boolean', 'default' => false],
 ];

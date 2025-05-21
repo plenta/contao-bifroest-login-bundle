@@ -26,7 +26,7 @@ use Symfony\Component\Routing\RouterInterface;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 #[Route('_bifroest/auth/linkedin', defaults: ['_scope' => 'frontend'])]
-class LinkedInController extends AbstractController
+class LinkedInController extends AbstractAuthenticationController
 {
     protected const BASE_URL = 'https://www.linkedin.com/oauth/v2';
 
@@ -73,8 +73,9 @@ class LinkedInController extends AbstractController
         if ($user && $user->bifroest_linkedin_sub === $data['sub']) {
             $userManager->loginUser($user);
 
-            return $this->redirect($contentUrlGenerator->generate($jumpTo));
+            return $this->redirectAfterLogin($request, $jumpTo);
         }
+
         if ($user) {
             $page = PageModel::findByPk($element->bifroest_jumpTo_emailInUse);
 
@@ -95,6 +96,6 @@ class LinkedInController extends AbstractController
 
         $userManager->loginUser($user);
 
-        return $this->redirect($contentUrlGenerator->generate($jumpTo));
+        return $this->redirectAfterLogin($request, $jumpTo);
     }
 }
