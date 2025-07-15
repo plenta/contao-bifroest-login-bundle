@@ -16,7 +16,7 @@ $GLOBALS['TL_DCA']['tl_content']['palettes'][BifroestLoginController::TYPE] = '
 {type_legend},type,headline;
 {config_legend},bifroest_services,module,bifroest_jumpTo,bifroest_jumpTo_emailInUse,bifroest_friendly_forwarding;
 {text_legend},text;
-{layout_linkedin_legend},bifroest_linkedin_icon_size,bifroest_linkedin_icon_type;
+{layout_linkedin_legend},bifroest_linkedin_icon_size,bifroest_linkedin_icon_type,bifroest_linkedin_icon_text;
 {layout_google_legend},bifroest_google_icon_type,bifroest_google_icon_theme,bifroest_google_icon_size,bifroest_google_icon_shape,bifroest_google_icon_text,bifroest_google_icon_alignment,bifroest_google_icon_width;
 {layout_apple_legend},bifroest_apple_icon_mode,bifroest_apple_icon_type,bifroest_apple_icon_color,bifroest_apple_icon_border,bifroest_apple_icon_border_radius,bifroest_apple_icon_width,bifroest_apple_icon_height,bifroest_apple_icon_size,bifroest_apple_icon_logo_position,bifroest_apple_icon_label_position;
 {template_legend:hide},customTpl;
@@ -51,14 +51,14 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['bifroest_linkedin_icon_size'] = [
     'inputType' => 'select',
     'options' => ['small', 'large'],
     'reference' => &$GLOBALS['TL_LANG']['tl_content']['bifroest_sizes_options'],
-    'eval' => ['tl_class' => 'clr w50'],
+    'eval' => ['tl_class' => 'clr w33'],
     'sql' => "varchar(16) COLLATE ascii_bin NOT NULL default 'small'",
 ];
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['bifroest_linkedin_icon_type'] = [
     'inputType' => 'select',
     'options' => ['retina' => 'Retina', 'non-retina' => 'Non-Retina'],
-    'eval' => ['tl_class' => 'w50'],
+    'eval' => ['tl_class' => 'w33'],
     'sql' => "varchar(16) COLLATE ascii_bin NOT NULL default 'retina'",
 ];
 
@@ -133,6 +133,14 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['bifroest_apple_icon_size'] = [
 ];
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['bifroest_apple_icon_type'] = [
+    'inputType' => 'select',
+    'options' => ['sign-in', 'continue', 'sign-up'],
+    'reference' => &$GLOBALS['TL_LANG']['tl_content']['bifroest_icon_text_options'],
+    'eval' => ['tl_class' => 'w33'],
+    'sql' => "varchar(16) COLLATE ascii_bin NOT NULL default 'sign-in'",
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['bifroest_linkedin_icon_text'] = [
     'inputType' => 'select',
     'options' => ['sign-in', 'continue', 'sign-up'],
     'reference' => &$GLOBALS['TL_LANG']['tl_content']['bifroest_icon_text_options'],

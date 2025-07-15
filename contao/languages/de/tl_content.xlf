@@ -71,6 +71,12 @@
             <trans-unit id="tl_content.bifroest_google_icon_text.0">
                 <target>Buttontext</target>
             </trans-unit>
+            <trans-unit id="tl_content.bifroest_linkedin_icon_text.1">
+                <target>Bitte wählen Sie einen Buttontext aus der Liste aus.</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_linkedin_icon_text.0">
+                <target>Buttontext</target>
+            </trans-unit>
             <trans-unit id="tl_content.bifroest_google_icon_text.1">
                 <target>Bitte wählen Sie einen Buttontext aus der Liste aus.</target>
             </trans-unit>

@@ -1,5 +1,5 @@
 {% trans_default_domain 'contao_default' %}
 
 <div class="login-service service-{{ service }} icon-size-{{ data.bifroest_linkedin_icon_size }} icon-type-{{ data.bifroest_linkedin_icon_type }}">
-    <a href="{{ path('bifroest_' ~ (service|lower) ~ '_register') }}" title="{{ 'MSC.bifroest.sign_in_with_linkedIn'|trans }}"><span class="title">{{ 'MSC.bifroest.sign_in_with_linkedIn'|trans }}</span></a>
+    <a href="{{ path('bifroest_' ~ (service|lower) ~ '_register') }}" title="{{ ('MSC.bifroest.linkedin.' ~ data.bifroest_linkedin_icon_text)|trans }}"><span class="title">{{ ('MSC.bifroest.linkedin.' ~ data.bifroest_linkedin_icon_text)|trans }}</span></a>
 </div>

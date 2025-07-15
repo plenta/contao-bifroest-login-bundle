@@ -2,11 +2,23 @@
 <xliff version="1.1">
     <file>
         <body>
-            <trans-unit id="MSC.bifroest.sign_in_with_linkedIn">
+            <trans-unit id="MSC.bifroest.linkedin.sign-in">
                 <target>Se connecter avec LinkedIn</target>
             </trans-unit>
-            <trans-unit id="MSC.bifroest.sign_in_with_apple">
+            <trans-unit id="MSC.bifroest.apple.sign-in">
                 <target>Se connecter avec Apple</target>
+            </trans-unit>
+            <trans-unit id="MSC.bifroest.linkedin.sign-up">
+                <target>S'inscrire avec LinkedIn</target>
+            </trans-unit>
+            <trans-unit id="MSC.bifroest.apple.sign-up">
+                <target>S'inscrire avec Apple</target>
+            </trans-unit>
+            <trans-unit id="MSC.bifroest.linkedin.continue">
+                <target>Continuer avec LinkedIn</target>
+            </trans-unit>
+            <trans-unit id="MSC.bifroest.apple.continue">
+                <target>Continuer avec Apple</target>
             </trans-unit>
             <trans-unit id="CTE.bifroest_login.0">
                 <target>Single-Sign-On-Login</target>
