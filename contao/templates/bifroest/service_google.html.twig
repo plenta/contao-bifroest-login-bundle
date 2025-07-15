@@ -1,5 +1,5 @@
 {% add 'google_script' to head %}
-    <script src="https://accounts.google.com/gsi/client" async></script>
+    <script src="https://accounts.google.com/gsi/client?hl={{ app.locale }}" async></script>
 {% endadd %}
 
 <div id="g_id_onload"
@@ -10,6 +10,7 @@
      data-auto_prompt="false"
      data-use_fedcm_for_prompt="true"
      data-use_fedcm_for_button="true"
+     data-locale="{{ app.locale }}"
 >
 </div>
 
