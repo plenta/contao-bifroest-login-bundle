@@ -46,13 +46,13 @@ class BifroestLoginController extends AbstractContentElementController
             // Use the HTTP referer as a fallback, but only if scheme and host matches with the current request (see #5860)
             if ($refererUri->getScheme() === $requestUri->getScheme() && $refererUri->getHost() === $requestUri->getHost() && $refererUri->getPort() === $requestUri->getPort())
             {
-                $this->cookieManager->addCookie(Cookie::create('bifroest_login_redirect', StringUtil::specialchars(base64_encode((string) $refererUri)), time() + 3600));
+                $this->cookieManager->addCookie(Cookie::create('bifroest_login_redirect', StringUtil::specialchars(base64_encode((string) $refererUri)), time() + 3600)->withSameSite('None'));
             }
         }
 
         $state = bin2hex(random_bytes(16));
-        $this->cookieManager->addCookie(Cookie::create('bifroest_login_state', $state, time() + 3600));
-        $this->cookieManager->addCookie(Cookie::create('bifroest_login_content_element', (string) $model->id, time() + 3600));
+        $this->cookieManager->addCookie(Cookie::create('bifroest_login_state', $state, time() + 3600)->withSameSite('None'));
+        $this->cookieManager->addCookie(Cookie::create('bifroest_login_content_element', (string) $model->id, time() + 3600)->withSameSite('None'));
 
         $template->state = $state;
 
