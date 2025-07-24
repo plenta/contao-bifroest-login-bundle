@@ -13,7 +13,6 @@ declare(strict_types=1);
 namespace Plenta\ContaoBifroestLogin\Controller\Authentication;
 
 use Contao\ContentModel;
-use Contao\CoreBundle\Controller\AbstractController;
 use Contao\CoreBundle\Routing\ContentUrlGenerator;
 use Contao\MemberModel;
 use Contao\ModuleModel;

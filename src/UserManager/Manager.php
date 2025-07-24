@@ -89,14 +89,12 @@ class Manager
 
         // HOOK: send insert ID and user data
         if (isset($GLOBALS['TL_HOOKS']['createNewUser']) && \is_array($GLOBALS['TL_HOOKS']['createNewUser'])) {
-
             /** @var class-string<Module> $strClass */
             $strClass = Module::findClass($module->type);
 
             // Return if the class does not exist
-            if (!class_exists($strClass))
-            {
-                System::getContainer()->get('monolog.logger.contao.error')->error('Module class "' . $strClass . '" (module "' . $module->type . '") does not exist');
+            if (!class_exists($strClass)) {
+                System::getContainer()->get('monolog.logger.contao.error')->error('Module class "'.$strClass.'" (module "'.$module->type.'") does not exist');
             }
 
             $objModule = new $strClass($module, 'main');

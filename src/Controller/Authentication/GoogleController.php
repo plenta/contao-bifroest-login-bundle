@@ -13,7 +13,6 @@ declare(strict_types=1);
 namespace Plenta\ContaoBifroestLogin\Controller\Authentication;
 
 use Contao\ContentModel;
-use Contao\CoreBundle\Controller\AbstractController;
 use Contao\CoreBundle\Exception\AccessDeniedException;
 use Contao\CoreBundle\Routing\ContentUrlGenerator;
 use Contao\MemberModel;
@@ -69,6 +68,6 @@ class GoogleController extends AbstractAuthenticationController
 
         $userManager->loginUser($user);
 
-        return $this->redirectAfterLogin($request, $jumpTo);;
+        return $this->redirectAfterLogin($request, $jumpTo);
     }
 }

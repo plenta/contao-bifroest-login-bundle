@@ -29,6 +29,9 @@
             <trans-unit id="CTE.login">
                 <target>Login</target>
             </trans-unit>
+            <trans-unit id="MSC.bifroest.changePassword">
+                <target>Vous êtes connecté via SingleSignOn sans mot de passe. Il n'est donc pas possible de modifier le mot de passe.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -17,7 +17,6 @@ use Contao\CoreBundle\Controller\ContentElement\AbstractContentElementController
 use Contao\CoreBundle\DependencyInjection\Attribute\AsContentElement;
 use Contao\CoreBundle\Twig\FragmentTemplate;
 use Contao\StringUtil;
-use Contao\System;
 use Nyholm\Psr7\Uri;
 use Plenta\ContaoBifroestLogin\Cookies\CookieManager;
 use Symfony\Component\HttpFoundation\Cookie;
@@ -38,14 +37,12 @@ class BifroestLoginController extends AbstractContentElementController
         $template->google_api_key = $this->bifroestConfig['google_api_key'];
         $template->apple_client_id = $this->bifroestConfig['apple_client_id'];
 
-        if ($model->bifroest_friendly_forwarding && $referer = $request->headers->get('referer'))
-        {
+        if ($model->bifroest_friendly_forwarding && $referer = $request->headers->get('referer')) {
             $refererUri = new Uri($referer);
             $requestUri = new Uri($request->getUri());
 
             // Use the HTTP referer as a fallback, but only if scheme and host matches with the current request (see #5860)
-            if ($refererUri->getScheme() === $requestUri->getScheme() && $refererUri->getHost() === $requestUri->getHost() && $refererUri->getPort() === $requestUri->getPort())
-            {
+            if ($refererUri->getScheme() === $requestUri->getScheme() && $refererUri->getHost() === $requestUri->getHost() && $refererUri->getPort() === $requestUri->getPort()) {
                 $this->cookieManager->addCookie(Cookie::create('bifroest_login_redirect', StringUtil::specialchars(base64_encode((string) $refererUri)), time() + 3600)->withSameSite('None'));
             }
         }
