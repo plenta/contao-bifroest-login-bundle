@@ -60,8 +60,8 @@ class GoogleController extends AbstractAuthenticationController
         $user = $userManager->createNewUser([
             'email' => $data['email'],
             'username' => $data['email'],
-            'firstname' => $data['given_name'],
-            'lastname' => $data['family_name'],
+            'firstname' => $data['given_name'] ?? '',
+            'lastname' => $data['family_name'] ?? '',
             'language' => $jumpTo->rootLanguage,
             'bifroest_google_sub' => $data['sub'],
         ], $module);

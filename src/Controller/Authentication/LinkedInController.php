@@ -86,8 +86,8 @@ class LinkedInController extends AbstractAuthenticationController
         $user = $userManager->createNewUser([
             'email' => $data['email'],
             'username' => $data['email'],
-            'firstname' => $data['given_name'],
-            'lastname' => $data['family_name'],
+            'firstname' => $data['given_name'] ?? '',
+            'lastname' => $data['family_name'] ?? '',
             'country' => $data['locale']['country'],
             'language' => $data['locale']['language'],
             'bifroest_linkedin_sub' => $data['sub'],
