@@ -41,6 +41,10 @@ class TlContent
             $services[] = 'apple';
         }
 
+        if (!empty($this->bifroestConfig['entra_api_key']) && !empty($this->bifroestConfig['entra_api_secret'])) {
+            $services[] = 'entra';
+        }
+
         return $services;
     }
 

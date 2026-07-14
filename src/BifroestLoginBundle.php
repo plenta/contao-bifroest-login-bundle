@@ -27,6 +27,10 @@ class BifroestLoginBundle extends AbstractBundle
                 ->scalarNode('linkedin_api_secret')->defaultValue('')->end()
                 ->scalarNode('google_api_key')->defaultValue('')->end()
                 ->scalarNode('apple_client_id')->defaultValue('')->end()
+                ->scalarNode('entra_api_key')->defaultValue('')->end()
+                ->scalarNode('entra_api_secret')->defaultValue('')->end()
+                ->scalarNode('entra_tenant_id')->defaultValue('')->end()
+                ->scalarNode('entra_client_id')->defaultValue('')->end()
             ->end()
         ;
     }
@@ -38,5 +42,9 @@ class BifroestLoginBundle extends AbstractBundle
         $container->parameters()->set('bifroest_linkedin_api_secret', $config['linkedin_api_secret']);
         $container->parameters()->set('bifroest_google_api_key', $config['google_api_key']);
         $container->parameters()->set('bifroest_apple_client_id', $config['apple_client_id']);
+        $container->parameters()->set('bifroest_entra_api_key', $config['entra_api_key']);
+        $container->parameters()->set('bifroest_entra_api_secret', $config['entra_api_secret']);
+        $container->parameters()->set('bifroest_entra_tenant_id', $config['entra_tenant_id']);
+        $container->parameters()->set('bifroest_entra_client_id', $config['entra_client_id']);
     }
 }

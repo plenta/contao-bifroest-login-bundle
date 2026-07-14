@@ -14,10 +14,11 @@
         "ext-json": "*",
         "contao/conflicts": "@dev",
         "contao/core-bundle": "^5.3",
-        "doctrine/dbal": "^3.2.0",
+        "doctrine/dbal": "^3.2.0 || ^4.2.0",
         "symfony/http-client": "^6.4 || ^7.4",
         "google/apiclient": "^2.18",
-        "lcobucci/jwt": "^5.5"
+        "lcobucci/jwt": "^5.5",
+        "ext-openssl": "*"
     },
     "require-dev": {
         "contao/manager-bundle": "5.7.*",

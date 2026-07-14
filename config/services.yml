@@ -9,6 +9,10 @@ services:
                 linkedIn_api_secret: '%bifroest_linkedin_api_secret%'
                 google_api_key: '%bifroest_google_api_key%'
                 apple_client_id: '%bifroest_apple_client_id%'
+                entra_api_key: '%bifroest_entra_api_key%'
+                entra_api_secret: '%bifroest_entra_api_secret%'
+                entra_tenant_id: '%bifroest_entra_tenant_id%'
+                entra_client_id: '%bifroest_entra_client_id%'
 
     Plenta\ContaoBifroestLogin\:
         resource: ../src/*

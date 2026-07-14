@@ -32,6 +32,9 @@
             <trans-unit id="MSC.bifroest.changePassword">
                 <target>Sie sind per SingleSignOn ohne Passwort angemeldet. Eine Änderung des Passworts ist daher nicht möglich.</target>
             </trans-unit>
+            <trans-unit id="MSC.bifroest.entra.sign_in">
+                <target>Über Microsoft Entra anmelden</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

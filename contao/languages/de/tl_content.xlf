@@ -251,6 +251,12 @@
             <trans-unit id="tl_content.bifroest_friendly_forwarding.1">
                 <target>Nach dem Login wird der Benutzer zur zuletzt besuchten Seite weitergeleitet.</target>
             </trans-unit>
+            <trans-unit id="tl_content.bifroest_auto_connect.0">
+                <target>Mitglied automatisch mit E-Mail-Adresse verbinden (nur Entra)</target>
+            </trans-unit>
+            <trans-unit id="tl_content.bifroest_auto_connect.1">
+                <target>Mitglieder werden automatisch mit der E-Mail-Adresse verbunden, auch wenn bereits ein Account besteht. Aktivieren Sie diese Option nur, wenn Sie wissen, was Sie tun, und den Benutzern vertrauen.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

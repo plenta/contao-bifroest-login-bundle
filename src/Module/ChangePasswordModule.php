@@ -29,6 +29,10 @@ class ChangePasswordModule extends ModuleChangePassword
             }
         }
 
+        if ($user->bifroest_entra_oid && $user->bifroest_entra_tid) {
+            $isSingleSignOn = true;
+        }
+
         if ($isSingleSignOn) {
             return $GLOBALS['TL_LANG']['MSC']['bifroest']['changePassword'];
         }

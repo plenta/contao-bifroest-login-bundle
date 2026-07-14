@@ -48,7 +48,9 @@ class BifroestLoginController extends AbstractContentElementController
         }
 
         $state = bin2hex(random_bytes(16));
+        $nonce = bin2hex(random_bytes(16));
         $this->cookieManager->addCookie(Cookie::create('bifroest_login_state', $state, time() + 3600)->withSameSite('None'));
+        $this->cookieManager->addCookie(Cookie::create('bifroest_login_nonce', $nonce, time() + 3600)->withSameSite('None'));
         $this->cookieManager->addCookie(Cookie::create('bifroest_login_content_element', (string) $model->id, time() + 3600)->withSameSite('None'));
 
         $template->state = $state;

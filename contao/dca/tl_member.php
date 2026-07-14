@@ -21,3 +21,12 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['bifroest_google_sub'] = [
 $GLOBALS['TL_DCA']['tl_member']['fields']['bifroest_apple_sub'] = [
     'sql' => "varchar(255) NOT NULL default ''",
 ];
+
+$GLOBALS['TL_DCA']['tl_member']['fields']['bifroest_entra_oid'] = [
+    'sql' => "varchar(255) NOT NULL default ''",
+];
+
+$GLOBALS['TL_DCA']['tl_member']['fields']['bifroest_entra_tid'] = [
+    'sql' => "varchar(255) NOT NULL default ''",
+];
+

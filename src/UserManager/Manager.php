@@ -129,6 +129,7 @@ class Manager
             ->removeCookie('bifroest_login_content_element')
             ->removeCookie('bifroest_login_state')
             ->removeCookie('bifroest_login_redirect')
+            ->removeCookie('bifroest_login_nonce')
         ;
     }
 }

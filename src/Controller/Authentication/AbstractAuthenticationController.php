@@ -26,10 +26,12 @@ abstract class AbstractAuthenticationController extends AbstractController
 
     protected function redirectAfterLogin(Request $request, PageModel $jumpTo)
     {
-        $redirect = base64_decode($request->cookies->get('bifroest_login_redirect'), true);
+        if ($request->cookies->get('bifroest_login_redirect')) {
+            $redirect = base64_decode($request->cookies->get('bifroest_login_redirect'), true);
 
-        if ($redirect) {
-            return $this->redirect($redirect);
+            if ($redirect) {
+                return $this->redirect($redirect);
+            }
         }
 
         return $this->redirect($this->contentUrlGenerator->generate($jumpTo));

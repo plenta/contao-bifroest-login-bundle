@@ -21,7 +21,7 @@ $GLOBALS['TL_DCA']['tl_content']['palettes'][BifroestLoginController::TYPE] = '
 {layout_apple_legend},bifroest_apple_icon_mode,bifroest_apple_icon_type,bifroest_apple_icon_color,bifroest_apple_icon_border,bifroest_apple_icon_border_radius,bifroest_apple_icon_width,bifroest_apple_icon_height,bifroest_apple_icon_size,bifroest_apple_icon_logo_position,bifroest_apple_icon_label_position;
 {template_legend:hide},customTpl;
 {protected_legend:hide},protected;
-{expert_legend:hide},cssID;
+{expert_legend:hide},cssID,bifroest_auto_connect;
 {invisible_legend:hide},invisible,start,stop';
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['bifroest_services'] = [
@@ -196,6 +196,11 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['bifroest_apple_icon_label_position']
 ];
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['bifroest_friendly_forwarding'] = [
+    'inputType' => 'checkbox',
+    'sql' => ['type' => 'boolean', 'default' => false],
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['bifroest_auto_connect'] = [
     'inputType' => 'checkbox',
     'sql' => ['type' => 'boolean', 'default' => false],
 ];
