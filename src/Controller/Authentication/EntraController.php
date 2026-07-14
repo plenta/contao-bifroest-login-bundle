@@ -27,6 +27,7 @@ use Lcobucci\JWT\Validation\Constraint\PermittedFor;
 use Lcobucci\JWT\Validation\Constraint\SignedWith;
 use Lcobucci\JWT\Validation\Constraint\StrictValidAt;
 use Lcobucci\JWT\Validation\Validator;
+use Plenta\ContaoBifroestLogin\Entra\EntraConfigurationProviderInterface;
 use Plenta\ContaoBifroestLogin\UserManager\Manager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
@@ -39,22 +40,24 @@ class EntraController extends AbstractAuthenticationController
 {
     protected const BASE_URL = 'https://login.microsoftonline.com/{tenant}/oauth2/v2.0';
 
-    public function __construct(protected array $bifroestConfig, protected ContentUrlGenerator $contentUrlGenerator, protected HttpClientInterface $client)
-    {
+    public function __construct(
+        protected ContentUrlGenerator $contentUrlGenerator,
+        protected HttpClientInterface $client,
+        private readonly EntraConfigurationProviderInterface $entraConfigurationProvider,
+    ) {
         parent::__construct($contentUrlGenerator);
     }
 
     #[Route('/register', name: 'bifroest_entra_register')]
-    public function register(Request $request, array $bifroestConfig, RouterInterface $router)
+    public function register(Request $request, RouterInterface $router)
     {
-        return $this->redirect($this->replaceTenant(self::BASE_URL).'/authorize?response_type=code&client_id='.$bifroestConfig['entra_client_id'].'&redirect_uri='.$router->generate('bifroest_entra_callback', referenceType: UrlGeneratorInterface::ABSOLUTE_URL).'&state='.$request->cookies->get('bifroest_login_state').'&scope=openid%20email%20profile&nonce='.$request->cookies->get('bifroest_login_nonce').'&response_mode=query');
+        return $this->redirect($this->replaceTenant(self::BASE_URL).'/authorize?response_type=code&client_id='.$this->entraConfigurationProvider->getConfiguration()->getClientId().'&redirect_uri='.$router->generate('bifroest_entra_callback', referenceType: UrlGeneratorInterface::ABSOLUTE_URL).'&state='.$request->cookies->get('bifroest_login_state').'&scope=openid%20email%20profile&nonce='.$request->cookies->get('bifroest_login_nonce').'&response_mode=query');
     }
 
     #[Route('/callback', name: 'bifroest_entra_callback')]
     public function callback(
         Request $request,
         HttpClientInterface $client,
-        array $bifroestConfig,
         RouterInterface $router,
         Manager $userManager,
         ContentUrlGenerator $contentUrlGenerator,
@@ -66,12 +69,14 @@ class EntraController extends AbstractAuthenticationController
             throw new \Exception('Invalid state');
         }
 
+        $configuration = $this->entraConfigurationProvider->getConfiguration();
+
         $response = $client->request('POST', $this->replaceTenant(self::BASE_URL).'/token', [
             'body' => [
                 'grant_type' => 'authorization_code',
                 'code' => $code,
-                'client_id' => $bifroestConfig['entra_client_id'],
-                'client_secret' => $bifroestConfig['entra_api_secret'],
+                'client_id' => $configuration->getClientId(),
+                'client_secret' => $configuration->getApiSecret(),
                 'redirect_uri' => $router->generate('bifroest_entra_callback', referenceType: UrlGeneratorInterface::ABSOLUTE_URL),
             ],
         ]);
@@ -84,7 +89,7 @@ class EntraController extends AbstractAuthenticationController
         $constraints = [
             new SignedWith(new Sha256(), $key),
             new IssuedBy($this->replaceTenant('https://login.microsoftonline.com/{tenant}/v2.0')),
-            new PermittedFor($this->bifroestConfig['entra_client_id']),
+            new PermittedFor($configuration->getClientId()),
             new StrictValidAt(SystemClock::fromUTC()),
         ];
 
@@ -139,7 +144,7 @@ class EntraController extends AbstractAuthenticationController
 
     protected function replaceTenant(string $url)
     {
-        return str_replace('{tenant}', $this->bifroestConfig['entra_tenant_id'], $url);
+        return str_replace('{tenant}', $this->entraConfigurationProvider->getConfiguration()->getTenantId(), $url);
     }
 
     protected function getKey(string $kid): InMemory
